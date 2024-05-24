@@ -13,6 +13,12 @@
           sync-j="4"
           revision="refs/heads/fourteen" />
 
+  <remote name="david"
+          fetch="https://github.com/DqrKnzx/"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/fourteen" />
+
   <remote name="gitlab"
           fetch="https://gitlab.com/minaripenguin/"
           sync-c="true"
@@ -73,7 +79,7 @@
   <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="rising" />
 
   <!-- Build  -->
-  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="rising" >
+  <project path="build/make" name="android_build" groups="pdk,sysui-studio" remote="david" >
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
     <linkfile dest="build/core" src="core" />
@@ -82,7 +88,7 @@
     <linkfile dest="build/tools" src="tools" />
   </project>
 
-  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="rising" >
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="david" >
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
